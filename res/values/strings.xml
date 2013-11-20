@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="APP_NAME">TardisCardFlipper</string>
-    <string name="CARD_TITLE">Hello Glass!</string>
+    <string name="CARD_TITLE">Hello!</string>
     <string name="CARD_SUBTITLE">Doctor Who?</string>
 </resources>
