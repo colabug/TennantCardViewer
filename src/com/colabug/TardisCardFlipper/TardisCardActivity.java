@@ -2,22 +2,52 @@ package com.colabug.TardisCardFlipper;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.view.View;
 import com.google.android.glass.app.Card;
+import com.google.android.glass.widget.CardScrollView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class TardisCardActivity extends Activity
 {
+    private List<Card> cards;
+
     @Override
     public void onCreate( Bundle savedInstanceState )
     {
         super.onCreate( savedInstanceState );
 
-        Card card1 = new Card( this );
-        card1.setText( getString( R.string.CARD_TITLE ) );
-        card1.setInfo( getString( R.string.CARD_SUBTITLE ) );
-        card1.setFullScreenImages( true );
-        card1.addImage( R.drawable.tennant_glasses );
-        View card1View = card1.toView();
-        setContentView( card1View );
+        createCardList();
+        setContentView( createCardScrollerWithList() );
+    }
+
+    private void createCardList()
+    {
+        cards = new ArrayList<Card>();
+        cards.add( generateCard() );
+        cards.add( generateCard() );
+        cards.add( generateCard() );
+    }
+
+    private Card generateCard()
+    {
+        Card card = new Card( this );
+
+        card.setText( getString( R.string.CARD_TITLE ) );
+        card.setInfo( getString( R.string.CARD_SUBTITLE ) );
+        card.setFullScreenImages( true );
+        card.addImage( R.drawable.tennant_glasses );
+
+        return card;
+    }
+
+    private CardScrollView createCardScrollerWithList()
+    {
+        CardScrollView cardScrollView = new CardScrollView( this );
+
+        cardScrollView.setAdapter( new ExampleCardScrollAdapter( cards ) );
+        cardScrollView.activate();
+
+        return cardScrollView;
     }
 }
