@@ -3,4 +3,6 @@
     <string name="APP_NAME">TardisCardViewer</string>
     <string name="CARD_TITLE">Hello!</string>
     <string name="CARD_SUBTITLE">Doctor Who?</string>
+
+    <string name="glass_voice_trigger">show the doctor</string>
 </resources>
