@@ -1,4 +1,4 @@
-package com.colabug.TardisCardFlipper;
+package com.colabug.tennant.viewer;
 
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,11 +7,11 @@ import com.google.android.glass.widget.CardScrollAdapter;
 
 import java.util.List;
 
-public class ExampleCardScrollAdapter extends CardScrollAdapter
+public class TennantCardScrollAdapter extends CardScrollAdapter
 {
     private List<Card> cards;
 
-    public ExampleCardScrollAdapter( List<Card> cards )
+    public TennantCardScrollAdapter( List<Card> cards )
     {
         this.cards = cards;
     }

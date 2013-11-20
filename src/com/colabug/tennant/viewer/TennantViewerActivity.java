@@ -1,4 +1,4 @@
-package com.colabug.TardisCardFlipper;
+package com.colabug.tennant.viewer;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import com.google.android.glass.widget.CardScrollView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TardisCardActivity extends Activity
+public class TennantViewerActivity extends Activity
 {
     private List<Card> cards;
     private int[] imageIds = { R.drawable.tennant_glasses,
@@ -24,7 +24,6 @@ public class TardisCardActivity extends Activity
     public void onCreate( Bundle savedInstanceState )
     {
         super.onCreate( savedInstanceState );
-
         createCardList();
         setContentView( createCardScrollerWithList() );
     }
@@ -55,7 +54,7 @@ public class TardisCardActivity extends Activity
     {
         CardScrollView cardScrollView = new CardScrollView( this );
 
-        cardScrollView.setAdapter( new ExampleCardScrollAdapter( cards ) );
+        cardScrollView.setAdapter( new TennantCardScrollAdapter( cards ) );
         cardScrollView.activate();
 
         return cardScrollView;
