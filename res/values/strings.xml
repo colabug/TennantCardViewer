@@ -1,8 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="APP_NAME">TardisCardViewer</string>
-    <string name="CARD_TITLE">Hello!</string>
-    <string name="CARD_SUBTITLE">Doctor Who?</string>
-
+    <string name="APP_NAME">TennantCardViewer</string>
     <string name="glass_voice_trigger">show the doctor</string>
+
+    <string name="GLASSES_TITLE">Hello!</string>
+    <string name="GLASSES_SUBTITLE">Doctor Who?</string>
+
+    <string name="LONGING_TITLE">Fancy a ride?</string>
+    <string name="LONGING_SUBTITLE">Come away with me!</string>
+
+    <string name="SPACE_TITLE">Tennant\'s in space-e-ace</string>
+    <string name="SPACE_SUBTITLE"></string>
+
+    <string name="SNOW_TITLE">Heard you liked snow...</string>
+    <string name="SNOW_SUBTITLE">Snowball fight?</string>
+
+    <string name="BARS_TITLE">Bars? Really?</string>
+    <string name="BARS_SUBTITLE">You\'re the only thing that keeps me here</string>
+
+    <string name="CLOCK_TITLE">Sup?</string>
+    <string name="CLOCK_SUBTITLE">Timey wimey</string>
+
+    <string name="KING_TITLE">Doctor Who?</string>
+    <string name="KING_SUBTITLE">I\'m the king!</string>
 </resources>
