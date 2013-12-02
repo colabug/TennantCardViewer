@@ -1,19 +1,34 @@
+This glassware shows images of my favorite Doctor Who with text.
+
+Voice Commands
+
+    Launch static card viewer
+
+        "ok glass" ... "show my doctor"
+
+    Launch live card viewer
+
+        "ok glass" ... "long live the doctor"
+
+Live card handling adapted from the compass example:
+
+    https://github.com/googleglass/gdk-compass-sample
+
 Image credits:
+    Glasses Tennant
+    http://www.nerdist.com/2011/01/doctor-who-for-newbies-the-tenth-doctor/
 
-Glasses Tennant
-http://www.nerdist.com/2011/01/doctor-who-for-newbies-the-tenth-doctor/
+    Tennant in the Snow
+    http://cdn.wegotthiscovered.com/wp-content/uploads/David_Tennant_hints_at_Doctor_Who_50th_anniversary_return.jpg
 
-Tennant in the Snow
-http://cdn.wegotthiscovered.com/wp-content/uploads/David_Tennant_hints_at_Doctor_Who_50th_anniversary_return.jpg
+    Tennant with Bars
+    http://i.telegraph.co.uk/multimedia/archive/01208/david-tennant460_1208355c.jpg
 
-Tennant with Bars
-http://i.telegraph.co.uk/multimedia/archive/01208/david-tennant460_1208355c.jpg
+    Longing Tennant
+    http://www.animeherald.com/wp-content/uploads/2013/08/doctor-who-tenant1.jpg
 
-Longing Tennant
-http://www.animeherald.com/wp-content/uploads/2013/08/doctor-who-tenant1.jpg
+    Space Tennant & Clock Tennant
+    http://timidmonster.com/why-david-tennant-is-the-best-doctor-who/
 
-Space Tennant & Clock Tennant
-http://timidmonster.com/why-david-tennant-is-the-best-doctor-who/
-
-King Tennant
-http://www.nerdist.com/2011/01/doctor-who-for-newbies-the-tenth-doctor/
+    King Tennant
+    http://www.nerdist.com/2011/01/doctor-who-for-newbies-the-tenth-doctor/

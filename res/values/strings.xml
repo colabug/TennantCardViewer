@@ -1,8 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="APP_NAME">TennantCardViewer</string>
-    <string name="glass_voice_trigger">show the doctor</string>
 
+    <!--Voice triggers-->
+    <string name="STATIC_CARD_VOICE_TRIGGER">show my doctor</string>
+    <string name="LIVE_CARD_VOICE_TRIGGER">long live the doctor</string>
+
+    <!--Menu-->
+    <string name="READ_MENU_OPTION">Read Aloud</string>
+    <string name="STOP_MENU_OPTION">Stop</string>
+
+    <!--Card text-->
     <string name="GLASSES_TITLE">Hello!</string>
     <string name="GLASSES_SUBTITLE">Doctor Who?</string>
 

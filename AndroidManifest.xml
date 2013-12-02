@@ -5,6 +5,7 @@
     android:versionCode="1"
     android:versionName="1.0">
 
+    <!--Set to glass values-->
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="15"/>
@@ -13,22 +14,39 @@
         android:label="@string/APP_NAME"
         android:icon="@drawable/icon">
 
+        <!--Static card viewer-->
         <activity
             android:name=".TennantViewerActivity"
             android:label="@string/APP_NAME">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-
+            <!--Voice trigger-->
             <intent-filter>
                 <action android:name="com.google.android.glass.action.VOICE_TRIGGER"/>
             </intent-filter>
-
             <meta-data
                 android:name="com.google.android.glass.VoiceTrigger"
-                android:resource="@xml/voice_trigger"/>
+                android:resource="@xml/static_voice_trigger"/>
         </activity>
+
+        <!--Service for live card-->
+        <service
+            android:name=".TennantService"
+            android:label="@string/APP_NAME"
+            android:icon="@drawable/icon"
+            android:enabled="true">
+
+            <!--Voice trigger-->
+            <intent-filter>
+                <action android:name="com.google.android.glass.action.VOICE_TRIGGER"/>
+            </intent-filter>
+            <meta-data
+                android:name="com.google.android.glass.VoiceTrigger"
+                android:resource="@xml/live_voice_trigger"/>
+        </service>
+
+        <!--Menu options-->
+        <activity
+            android:name=".TennantMenuActivity"
+            android:theme="@style/MenuTheme" />
     </application>
 </manifest>
