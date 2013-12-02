@@ -1,6 +1,8 @@
 package com.colabug.tennant.viewer;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import com.google.android.glass.app.Card;
 import com.google.android.glass.widget.CardScrollView;
@@ -79,5 +81,10 @@ public class TennantViewerActivity extends Activity
         cardScrollView.activate();
 
         return cardScrollView;
+    }
+
+    public static Intent createIntent( Context context )
+    {
+        return new Intent( context, TennantViewerActivity.class );
     }
 }

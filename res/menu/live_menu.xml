@@ -4,9 +4,9 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/read_aloud"
-        android:title="@string/READ_MENU_OPTION"
-        android:icon="@drawable/read"/>
+        android:id="@+id/start_viewer"
+        android:title="@string/START_MENU_OPTION"
+        android:icon="@drawable/play"/>
 
     <item
         android:id="@+id/stop"

@@ -77,8 +77,8 @@ public class TennantMenuActivity extends Activity
     {
         switch ( item.getItemId() )
         {
-            case R.id.read_aloud:
-                tennantService.readTextAloud();
+            case R.id.start_viewer:
+                startActivity( TennantViewerActivity.createIntent(this) );
                 return true;
 
             case R.id.stop:

@@ -119,7 +119,6 @@ public class TennantRenderer implements SurfaceHolder.Callback
 
     /**
      * Redraws the view in the background.
-     * TODO: Cycle through the doctor cards automatically.
      */
     private class RenderThread extends Thread
     {

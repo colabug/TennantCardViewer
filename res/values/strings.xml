@@ -7,7 +7,7 @@
     <string name="LIVE_CARD_VOICE_TRIGGER">long live the doctor</string>
 
     <!--Menu-->
-    <string name="READ_MENU_OPTION">Read Aloud</string>
+    <string name="START_MENU_OPTION">Show Viewer</string>
     <string name="STOP_MENU_OPTION">Stop</string>
 
     <!--Card text-->
