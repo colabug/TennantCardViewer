@@ -1,14 +1,14 @@
 This glassware shows images of my favorite Doctor Who with text.
 
-Voice Commands
-
-    Launch static card viewer
-
-        "ok glass" ... "show my doctor"
-
-    Launch live card viewer
+To launch a sticky live card viewer use this command:
 
         "ok glass" ... "long live the doctor"
+
+To view individual slides, use the menu option to launch the slide viewer.
+ 
+TODO: Rename the menu option "Show Viewer" to something like "View All" and have
+      the live card automatically refresh it's view (text and images) on a
+      scheudle.
 
 Live card handling adapted from the compass example:
 
