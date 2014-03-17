@@ -23,11 +23,15 @@ import android.os.Binder;
 import android.os.IBinder;
 import android.speech.tts.TextToSpeech;
 
+import android.util.Log;
+import android.widget.RemoteViews;
 import com.google.android.glass.timeline.LiveCard;
 import com.google.android.glass.timeline.TimelineManager;
 
 public class TennantService extends Service
 {
+    private static final String TAG = TennantService.class.getSimpleName();
+
     private static final String LIVE_CARD_ID = "tennant_is_alive";
 
     private final TennantBinder binder = new TennantBinder();
@@ -35,7 +39,6 @@ public class TennantService extends Service
     private TextToSpeech textToSpeech;
 
     private TimelineManager timelineManager;
-    private TennantRenderer tennantRenderer;
     private LiveCard        liveCard;
 
     /**
@@ -85,11 +88,18 @@ public class TennantService extends Service
     @Override
     public int onStartCommand( Intent intent, int flags, int startId )
     {
+        Log.d( TAG, "onStartCommand()" + intent );
         if ( liveCard == null )
         {
             configureLiveCard();
-            liveCard.publish( LiveCard.PublishMode.REVEAL);
         }
+
+        if ( liveCard.isPublished() )
+        {
+            liveCard.unpublish();
+        }
+
+        liveCard.publish( LiveCard.PublishMode.REVEAL );
 
         return START_STICKY;
     }
@@ -99,9 +109,11 @@ public class TennantService extends Service
      */
     private void configureLiveCard()
     {
-        liveCard = timelineManager.createLiveCard( LIVE_CARD_ID );
+        Log.d( TAG, "configureLiveCard()" );
+        RemoteViews views = new RemoteViews(getPackageName(), R.layout.live_tennant);
 
-        tennantRenderer = new TennantRenderer( this );
+        liveCard = timelineManager.createLiveCard( LIVE_CARD_ID );
+        liveCard.setViews( views );
 
         configureMenu();
     }
@@ -120,10 +132,11 @@ public class TennantService extends Service
     @Override
     public void onDestroy()
     {
+        Log.d( TAG, "onDestroy()" );
+
         if ( liveCard != null && liveCard.isPublished() )
         {
             liveCard.unpublish();
-            liveCard.getSurfaceHolder().removeCallback( tennantRenderer );
             liveCard = null;
         }
 
