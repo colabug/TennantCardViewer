@@ -81,8 +81,8 @@ public class TennantViewerActivity extends Activity
         Card card = new Card( this );
 
         card.setText( getString( titleId ) );
-        card.setInfo( getString( subTitleId ) );
-        card.setFullScreenImages( true );
+        card.setFootnote( subTitleId );
+        card.setImageLayout( Card.ImageLayout.FULL );
         card.addImage( imageId );
 
         return card;

@@ -88,7 +88,7 @@ public class TennantService extends Service
         if ( liveCard == null )
         {
             configureLiveCard();
-            liveCard.publish();
+            liveCard.publish( LiveCard.PublishMode.REVEAL);
         }
 
         return START_STICKY;
@@ -99,13 +99,9 @@ public class TennantService extends Service
      */
     private void configureLiveCard()
     {
-        liveCard = timelineManager.getLiveCard( LIVE_CARD_ID );
-        tennantRenderer = new TennantRenderer( this );
+        liveCard = timelineManager.createLiveCard( LIVE_CARD_ID );
 
-        liveCard.enableDirectRendering( true )
-                .getSurfaceHolder()
-                .addCallback( tennantRenderer );
-        liveCard.setNonSilent( true );
+        tennantRenderer = new TennantRenderer( this );
 
         configureMenu();
     }
